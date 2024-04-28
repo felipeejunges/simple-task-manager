@@ -1,0 +1,22 @@
+.container {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .tasks-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .fab-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }

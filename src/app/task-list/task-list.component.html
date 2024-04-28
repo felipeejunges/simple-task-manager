@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="tasks-container">
+    <div *ngFor="let task of tasks" class="task-item">
+      <span>{{ task.title }}</span>
+      <mat-icon (click)="openEditDialog(task)">edit</mat-icon>
+      <mat-icon (click)="deleteTask(task.id)">delete</mat-icon>
+    </div>
+  </div>
+  <button mat-fab color="primary" class="fab-button" (click)="openNewTaskDialog()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
