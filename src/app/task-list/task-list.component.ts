@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Task } from '../models/task.model';
 import { TaskService } from '../services/task.service';
 import { TaskDialogComponent } from '../task-dialog/task-dialog.component';
+import { MatTableDataSource } from '@angular/material/table'; 
 
 @Component({
   selector: 'app-task-list',
@@ -11,8 +12,11 @@ import { TaskDialogComponent } from '../task-dialog/task-dialog.component';
 })
 export class TaskListComponent implements OnInit {
   tasks?: Array<Task>;
+  dataSource: MatTableDataSource<Task>;
 
-  constructor(private taskService: TaskService, private dialog: MatDialog) { }
+  constructor(private taskService: TaskService, private dialog: MatDialog) { 
+    this.dataSource = new MatTableDataSource<Task>(this.tasks)
+  }
 
   ngOnInit(): void {
     this.loadTasks();

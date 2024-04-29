@@ -1,11 +1,19 @@
-<div class="container">
-  <div class="tasks-container">
-    <div *ngFor="let task of tasks" class="task-item">
-      <span>{{ task.title }}</span>
-      <mat-icon (click)="openEditDialog(task)">edit</mat-icon>
-      <mat-icon (click)="deleteTask(task.id)">delete</mat-icon>
+<div class="container mat-elevation-z2">
+  <ul class="list-group">
+    <div *ngFor="let task of tasks" class="task-item mat-elevation-z1">
+      <li class="list-group-item">
+        <span class="task-title">{{ task.title }}</span>
+        <div class="button-group">
+          <button mat-icon-button color="primary" (click)="openEditDialog(task)">
+            <mat-icon class="material-icons-outlined">edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteTask(task.id)">
+            <mat-icon class="material-icons-outlined">delete</mat-icon>
+          </button>
+        </div>
+      </li>
     </div>
-  </div>
+  </ul>
   <button mat-fab color="primary" class="fab-button" (click)="openNewTaskDialog()">
     <mat-icon>add</mat-icon>
   </button>

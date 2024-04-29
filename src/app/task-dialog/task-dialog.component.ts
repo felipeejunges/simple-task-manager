@@ -21,7 +21,6 @@ export class TaskDialogComponent {
 
   onSave(): void {
     this.data.task.id ? this.updateTask(this.data.task) : this.addTask(this.data.task)
-    this.dialogRef.close(this.data.task);
   }
 
   updateTask(task: Task): void {
