@@ -1,20 +1,33 @@
-<div class="container mat-elevation-z2">
+<!-- <div class="container mat-elevation-z2">
   <ul class="list-group">
     <div *ngFor="let task of tasks" class="task-item mat-elevation-z1">
       <li class="list-group-item">
-        <span class="task-title">{{ task.title }}</span>
+        <span class="task-title"></span>
         <div class="button-group">
+         
+        </div>
+      </li>
+    </div>
+  </ul>
+</div> -->
+  <div class="container">
+  <table class="table">
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.title }}</td>
+        <td> 
           <button mat-icon-button color="primary" (click)="openEditDialog(task)">
             <mat-icon class="material-icons-outlined">edit</mat-icon>
           </button>
           <button mat-icon-button color="warn" (click)="deleteTask(task.id)">
             <mat-icon class="material-icons-outlined">delete</mat-icon>
           </button>
-        </div>
-      </li>
-    </div>
-  </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
   <button mat-fab color="primary" class="fab-button" (click)="openNewTaskDialog()">
     <mat-icon>add</mat-icon>
   </button>
 </div>
+
