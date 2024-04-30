@@ -1,10 +1,12 @@
-<h1 mat-dialog-title>{{ data.task.id ? 'Edit Task' : 'New Task' }}</h1>
+<h1 mat-dialog-title class="text-light">
+  {{ data.task.id ? 'Editar Task' : 'Nova Task' }}
+</h1>
 <div mat-dialog-content>
   <mat-form-field>
     <input matInput placeholder="Task Title" [(ngModel)]="data.task.title">
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onCancel()">Cancel</button>
-  <button mat-button (click)="onSave()" cdkFocusInitial>{{ data.task.id ? 'Save' : 'Create' }}</button>
+  <button mat-stroked-button color="primary" (click)="onCancel()">Cancelar</button>
+  <button mat-flat-button color="primary" (click)="onSave()" cdkFocusInitial>{{ data.task.id ? 'Salvar' : 'Criar' }}</button>
 </div>

@@ -32,6 +32,7 @@ export class TaskListComponent implements OnInit {
   openEditDialog(task: Task): void {
     const dialogRef = this.dialog.open(TaskDialogComponent, {
       width: '250px',
+      panelClass: 'dark-modal',
       data: { task: { ...task } }
     });
 

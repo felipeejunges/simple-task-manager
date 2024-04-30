@@ -1,0 +1,13 @@
+
+::ng-deep .mat-mdc-dialog-container {
+    --mdc-dialog-container-color: #212529;
+}
+
+.mat-mdc-dialog-title {
+    color: #f8f9fa !important;
+}
+
+.mat-mdc-form-field-focus-overlay {
+    background-color: #212529;
+    color: #212529;
+}
